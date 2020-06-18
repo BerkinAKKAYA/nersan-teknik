@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Nersan Teknik - Hakkımızda</title>
+	<title>Hakkımızda - Nersan Teknik</title>
 </svelte:head>
 
 <h1>hakkımızda</h1>
