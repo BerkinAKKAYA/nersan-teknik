@@ -1,19 +1,29 @@
 <script context="module">
 	export function preload({ params, query }) {
-		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
-			return { posts };
-		});
+		return this.fetch(`blog.json`)
+			.then(r => r.json())
+			.then(posts => { return { posts }});
 	}
 </script>
 
 <script>
+	import BlogPost from '../../components/BlogPost.svelte';
 	export let posts;
 </script>
 
 <style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
+	#container {
+		display: flex;
+		flex-direction: column;
+		height: 50vh;
+		max-height: 500px;
+		overflow-y: auto;
+		margin-top: 30px;
+	}
+
+	@media (max-width: 700px)
+	{
+		h1 { text-align: center }
 	}
 </style>
 
@@ -23,8 +33,8 @@
 
 <h1>BLOG</h1>
 
-<ul>
+<div id="container">
 	{#each posts as post}
-		<li><a rel='prefetch' href='blog/{post.slug}'>{post.title}</a></li>
+		<BlogPost content={post} />
 	{/each}
-</ul>
+</div>

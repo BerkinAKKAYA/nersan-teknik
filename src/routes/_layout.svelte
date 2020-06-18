@@ -14,16 +14,18 @@
 		left: 50%;
 		transform: translateX(-50%);
 		
-		background-color: rgba(42, 38, 43, 0.15)
+		background-color: rgba(42, 38, 43, 0.15);
 	}
+
+	main { padding: 50px }
 
 	footer {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 10px 50px;
 		box-sizing: border-box;
 		margin-bottom: 50px;
+		padding: 10px 50px;
 	}
 
 	.iletisim { display:flex; align-items: center;}
