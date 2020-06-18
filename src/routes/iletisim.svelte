@@ -1,29 +1,19 @@
 <svelte:head>
 	<title>İletişim - Nersan Teknik</title>
-	
-	<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
-	<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
 </svelte:head>
-
-<script>
-	import { onMount } from 'svelte';
-
-	onMount(() => {
-		mapboxgl.accessToken = 'pk.eyJ1IjoiYmVya2luYWtrYXlhIiwiYSI6ImNrYmtybzN2cDExemoycm81bnoxejFpcXcifQ.QCc240chJiGiRmxCE5udkg';
-		
-		let map = new mapboxgl.Map({
-			container: 'map', // container id
-			style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-			center: [-74.5, 40], // starting position [lng, lat]
-			zoom: 9 // starting zoom
-		});
-	})
-</script>
 
 <div id="container">
 	<section>
 		<h2>KONUM</h2>
-		<div id="map"></div>
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3016.166853752005!2d29.193920915387807!3d40.89015467931297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac37b2135a725%3A0xb3ed21e211b85f7d!2sTurkish%20Red%20Crescent%20Kartal%20Anatolian%20High%20School!5e0!3m2!1sen!2str!4v1592484663372!5m2!1sen!2str"
+			width="600"
+			height="450"
+			frameborder="0"
+			allowfullscreen=""
+			aria-hidden="false"
+			tabindex="0"
+			title="Harita"></iframe>
 	</section>
 
 	<section>
@@ -53,11 +43,11 @@
 		cursor: default;
 	}
 
-	#map {
+	iframe {
 		width: 100%;
 		min-width: 200px;
 		max-width: 400px;
-		height: 200px;
-		margin-top: 30px;
+		margin-top: 20px;
+		border: none;
 	}
 </style>
