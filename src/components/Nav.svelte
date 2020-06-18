@@ -3,58 +3,48 @@
 </script>
 
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-	}
+	div {
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
 
-	ul {
-		margin: 0;
-		padding: 0;
-	}
+		width: 1000px;
+		max-width: 80vw;
+		margin-top: 125px;
 
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	[aria-current] {
 		position: relative;
-		display: inline-block;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
-	[aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
+	img { width: 200px }
 
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
+	a.link {
+		color: #707070;
+		background-color: #BEBEBE;
+
+		display: inline-flex;
+		align-items: center;
+		font-weight: bold;
+
+		font-family: Bison;
+		font-size: 1.4em;
+		padding: 6px 12px;
+		transition: all .2s;
 	}
+	a.link:hover { background-color: #ccc; color: #555 }
 </style>
 
-<nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
+<div>
+	<a href="/"><img src="/img/logo.png" alt="Logo" /></a>
 
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
-	</ul>
-</nav>
+	<nav>
+		<a aria-current="{segment === 'hakkimizda' ? 'page' : undefined}"
+		   href="hakkimizda"
+		   class="link">HAKKIMIZDA</a>
+		<a aria-current="{segment === 'blog'  ? 'page' : undefined}"
+		   class="link"
+		   href="blog"
+		   rel=prefetch >BLOG</a>
+	</nav>
+</div>
