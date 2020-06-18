@@ -27,7 +27,7 @@
         background: none;
         border-bottom: 1px solid #999;
         margin-bottom: 12px;
-        transition: border .2s;
+        transition: border .3s ease;
     }
     input[type=text]:focus, input[type=email]:focus {
         border-bottom: 2px solid #999;
