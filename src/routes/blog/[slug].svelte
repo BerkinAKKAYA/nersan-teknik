@@ -54,7 +54,7 @@
 </style>
 
 <svelte:head>
-	<title>{post.title}</title>
+	<title>{post.title} - Nersan Teknik</title>
 </svelte:head>
 
 <div class="container">

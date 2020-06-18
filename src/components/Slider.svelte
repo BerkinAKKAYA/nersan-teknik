@@ -9,8 +9,8 @@
 		return value;
     }
 
-    // $: index = Restrict(index, 0, slides.length);
-	// setInterval(() => { index += 1 }, 5000);
+    $: index = Restrict(index, 0, slides.length);
+	setInterval(() => { index += 1 }, 5000);
 </script>
 
 <style>

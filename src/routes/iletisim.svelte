@@ -1,3 +1,7 @@
+<script>
+	import ContactForm from '../components/ContactForm.svelte';
+</script>
+
 <svelte:head>
 	<title>İletişim - Nersan Teknik</title>
 </svelte:head>
@@ -16,7 +20,7 @@
 
 	<section>
 		<h2>FORM</h2>
-		...
+		<ContactForm />
 	</section>
 </div>
 
