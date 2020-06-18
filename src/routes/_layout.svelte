@@ -19,6 +19,11 @@
 
 	main { padding: 50px }
 
+	@media (max-width: 500px)
+	{
+		main { padding: 25px }
+	}
+
 	footer {
 		display: flex;
 		align-items: center;

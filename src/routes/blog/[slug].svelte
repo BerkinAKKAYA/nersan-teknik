@@ -18,6 +18,16 @@
 </script>
 
 <style>
+	.container {
+		max-height: 350px;
+		overflow-y: auto;
+	}
+
+	.content {
+		padding-top: 20px;
+		padding-right: 25px;
+	}
+
 	.content :global(h2) {
 		font-size: 1.4em;
 		font-weight: 500;
@@ -49,8 +59,10 @@
 	<title>{post.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
+<div class="container">
+	<h1>{post.title}</h1>
 
-<div class='content'>
-	{@html post.html}
+	<div class='content'>
+		{@html post.html}
+	</div>
 </div>

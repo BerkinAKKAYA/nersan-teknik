@@ -43,7 +43,9 @@
 </style>
 
 <div class="post">
-    <img src={content.imageURL} alt="Preview" />
+    <a rel='prefetch' href='blog/{content.slug}'>
+        <img src={content.imageURL} alt="Preview" />
+    </a>
     <div class="text">
         <a rel='prefetch' href='blog/{content.slug}'>{content.title}</a>
         <p>{content.description}</p>
