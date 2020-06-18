@@ -6,14 +6,11 @@
 	<section>
 		<h2>KONUM</h2>
 		<iframe
-			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3016.166853752005!2d29.193920915387807!3d40.89015467931297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac37b2135a725%3A0xb3ed21e211b85f7d!2sTurkish%20Red%20Crescent%20Kartal%20Anatolian%20High%20School!5e0!3m2!1sen!2str!4v1592484663372!5m2!1sen!2str"
-			width="600"
-			height="450"
+			src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12062.55492339095!2d29.170351!3d40.901739!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfed14ab67bfc112b!2sNersan%20Teknik!5e0!3m2!1sen!2str!4v1592501271904!5m2!1sen!2str" 
 			frameborder="0"
 			allowfullscreen=""
 			aria-hidden="false"
-			tabindex="0"
-			title="Harita"></iframe>
+			tabindex="0"></iframe>
 	</section>
 
 	<section>
