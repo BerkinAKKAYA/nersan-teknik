@@ -48,9 +48,9 @@
 		}
 
 		nav { margin-top: 20px }
-		nav a { width: 100px }
+		nav a { width: 130px }
 	}
-	@media (max-width: 300px)
+	@media (max-width: 400px)
 	{
 		nav { flex-direction: column }
 		nav a { width: 160px; margin-top: 5px }
