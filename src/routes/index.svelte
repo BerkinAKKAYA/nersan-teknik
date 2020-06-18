@@ -28,6 +28,9 @@
 		grid-template-columns: 3fr 1fr;
 		column-gap: 50px;
 		row-gap: 50px;
+
+		max-height: 480px;
+		overflow-y: auto;
 	}
 
 	h2 {
@@ -40,9 +43,15 @@
 
 	#products #slider {
 		display: grid;
-		grid-template-columns: 30px 1fr 1fr 30px;
+		grid-template-columns: 30px 1fr 30px;
 		column-gap: 20px;
 		align-items: center;
+	}
+	#products #slider #inner-slide-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 10px;
+		row-gap: 10px;
 	}
 	
 	#products #slider *,
@@ -59,17 +68,12 @@
 			align-items: center;
 			justify-content: center
 		}
-		
 		#container {
 			grid-template-columns: 1fr;
 		}
-		#products #slider {
-			grid-template-columns: 30px 1fr 30px;
+		#products #slider #inner-slide-container {
+			grid-template-columns: 1fr;
 		}
-		#products #slider {
-			grid-template-columns: 30px 1fr 30px;
-		}
-		#products .slide:nth-of-type(1) { display: none }
 	}
 </style>
 
@@ -82,8 +86,12 @@
 		<h2>ÜRÜNLER</h2>
 		<div id="slider">
 			<img src="/img/left-arrow.png"  alt="sol" class="arrow" on:click={LeftArrow} />
-			<div class="slide"><Slider slides={uvc} bind:index={uvcIndex} /></div>
-			<div class="slide"><Slider slides={ozon} bind:index={ozonIndex} /></div>
+
+			<div id="inner-slide-container">
+				<div class="slide"><Slider slides={uvc} bind:index={uvcIndex} /></div>
+				<div class="slide"><Slider slides={ozon} bind:index={ozonIndex} /></div>
+			</div>
+
 			<img src="/img/right-arrow.png" alt="sağ" class="arrow" on:click={RightArrow} />
 		</div>
 	</div>

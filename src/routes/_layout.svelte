@@ -17,7 +17,7 @@
 		background-color: rgba(42, 38, 43, 0.15);
 	}
 
-	main { padding: 50px }
+	main { padding: 50px; }
 
 	@media (max-width: 500px)
 	{
@@ -51,7 +51,7 @@
 	}
 </style>
 
-<Nav {segment}/>
+<Nav {segment} />
 
 <main>
 	<slot></slot>
