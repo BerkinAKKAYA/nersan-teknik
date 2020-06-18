@@ -3,7 +3,7 @@
 </script>
 
 <style>
-	div {
+	#container {
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
@@ -17,34 +17,53 @@
 		transform: translateX(-50%);
 	}
 
-	img { width: 200px }
+	img {
+		width: 200px;
+		display: flex;
+		align-items: flex-end;
+	}
 
-	a.link {
+	nav { display: flex }
+
+	nav a {
 		color: #707070;
 		background-color: #BEBEBE;
 
-		display: inline-flex;
-		align-items: center;
 		font-weight: bold;
-
 		font-family: Bison;
 		font-size: 1.4em;
 		padding: 6px 12px;
 		transition: all .2s;
+		text-align: center;
+
+		margin-left: 10px;
 	}
-	a.link:hover { background-color: #ccc; color: #555 }
+	nav a:hover { background-color: #ccc; color: #555 }
+
+	@media (max-width: 550px)
+	{
+		#container {
+			flex-direction: column;
+			align-items: center
+		}
+
+		nav { margin-top: 20px }
+		nav a { width: 100px }
+	}
+	@media (max-width: 300px)
+	{
+		nav { flex-direction: column }
+		nav a { width: 160px; margin-top: 5px }
+	}
 </style>
 
-<div>
+<div id="container">
 	<a href="/"><img src="/img/logo.png" alt="Logo" /></a>
 
 	<nav>
 		<a aria-current="{segment === 'hakkimizda' ? 'page' : undefined}"
-		   href="hakkimizda"
-		   class="link">HAKKIMIZDA</a>
+		   href="hakkimizda">HAKKIMIZDA</a>
 		<a aria-current="{segment === 'blog'  ? 'page' : undefined}"
-		   class="link"
-		   href="blog"
-		   rel=prefetch >BLOG</a>
+		   href="blog"rel=prefetch>BLOG</a>
 	</nav>
 </div>

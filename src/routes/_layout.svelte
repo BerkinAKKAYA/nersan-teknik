@@ -23,6 +23,7 @@
 		justify-content: space-between;
 		padding: 10px 50px;
 		box-sizing: border-box;
+		margin-bottom: 50px;
 	}
 
 	.iletisim { display:flex; align-items: center;}
@@ -32,7 +33,15 @@
 	.lang a { opacity: .7; transition: opacity .1s }
 	.lang a:hover { opacity: 1 }
 
-	footer img{ width: 28px}
+	footer img { width: 28px; }
+
+	@media (max-width: 550px)
+	{
+		.iletisim { text-align: center }
+		.iletisim img { display: none }
+		footer { flex-direction: column; padding: 20px }
+		.lang { margin-top: 15px }
+	}
 </style>
 
 <Nav {segment}/>
