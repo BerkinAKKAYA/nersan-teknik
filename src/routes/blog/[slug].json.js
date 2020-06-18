@@ -3,7 +3,7 @@ import posts from './_posts.js';
 const lookup = new Map();
 posts.forEach(post => { lookup.set(post.slug, JSON.stringify(post)); });
 
-export function get(req, res, next) {
+export function get(req, res) {
 	const { slug } = req.params;
 
 	if (lookup.has(slug)) {
