@@ -66,6 +66,7 @@
         type="tel" bind:value={phone}
         id="phone"
         name="phone"
+        placeholder="Telefon Numaranız"
         style="border-bottom-color: {phone ? '#00bb55' : '#999'}"/>
     <input
         required
