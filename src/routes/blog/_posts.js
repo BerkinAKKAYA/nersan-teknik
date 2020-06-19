@@ -21,7 +21,7 @@ const posts = [
 	},
 	{
 		title: 'Ozon nedir?',
-		slug: 'Ozon nedir?',
+		slug: 'ozon-nedir',
 		description: 'Ozon Nedir ve Nerelerde Kullanılır...',
 		imageURL: 'img/ozon-nedir.jpg',
 		html: `
