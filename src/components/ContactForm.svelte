@@ -53,26 +53,36 @@
     }
 </style>
 
-<form>
+<form action="https://formspree.io/xeqrzklg" method="POST">
     <input
         required
+        name="name"
         type="text"
         bind:value={name}
         placeholder="Ad & Soyad"
         style="border-bottom-color: {name ? '#00bb55' : '#999'}" />
-
+    <input 
+        type="tel" bind:value={phone}
+        id="phone"
+        name="phone"
+        pattern='\d{4}\d{3}\d{4}'
+        placeholder="05321234567"
+        style="border-bottom-color: {phone ? '#00bb55' : '#999'}"/>
     <input
         required
+        name="_replyto"
         type="email" bind:value={email}
         placeholder="mail@gmail.com"
         style="border-bottom-color: {EmailColor(email)}" />
 
     <input
         required
+        id="message"
+        name="message"
         type="text"
         bind:value={message}
         placeholder="Mesaj"
         style="border-bottom-color: {message ? '#00bb55' : '#999'}" />
 
-    <input type="submit" value="Gönder" disabled={!name || !message || !ValidEmail(email)}>
+    <input type="submit" value="Gönder" disabled={!name || !message || !phone || !ValidEmail(email)}>
 </form>
