@@ -65,8 +65,6 @@
         type="tel" bind:value={phone}
         id="phone"
         name="phone"
-        pattern='\d{4}\d{3}\d{4}'
-        placeholder="05321234567"
         style="border-bottom-color: {phone ? '#00bb55' : '#999'}"/>
     <input
         required
