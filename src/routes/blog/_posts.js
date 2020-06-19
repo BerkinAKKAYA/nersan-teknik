@@ -20,28 +20,15 @@ const posts = [
 		`
 	},
 	{
-		title: 'How to use Sapper',
-		slug: 'how-to-use-sapper',
-		description: 'This post explains what is sapper.',
-		imageURL: 'img/placeholder-image.jpg',
+		title: 'Ozon nedir?',
+		slug: 'Ozon nedir?',
+		description: 'Ozon Nedir? ve Nerelerde Kullanılır?',
+		imageURL: 'img/ozon-nedir.jpg',
 		html: `
-			<h2>Step one</h2>
-			<p>Create a new project, using <a href='https://github.com/Rich-Harris/degit'>degit</a>:</p>
-
-			<pre><code>npx degit "sveltejs/sapper-template#rollup" my-app
-			cd my-app
-			npm install # or yarn!
-			npm run dev
-			</code></pre>
-
-			<h2>Step two</h2>
-			<p>Go to <a href='http://localhost:3000'>localhost:3000</a>. Open <code>my-app</code> in your editor. Edit the files in the <code>src/routes</code> directory or add new ones.</p>
-
-			<h2>Step three</h2>
-			<p>...</p>
-
-			<h2>Step four</h2>
-			<p>Resist overdone joke formats.</p>
+		<h1>Ozon Nedir?</h1>
+		<p>Ozon; 3 adet oksijen atomunun yüksek voltaj altında birleşerek meydana getirdiği keskin kokulu, renksiz ve kararsız bir gazdır. Oda sıcaklığında hammaddesi olan oksijene dönüşür. Çok güçlü okside etme ve dezenfekte özelliği nedeniyle ticari kullanımı olan doğal tek dezenfektandır.</p>
+		<h2><strong>Ozon’un özellikleri:</strong></h2>
+		<ul><li>Bilinen en güçlü oksidandır.</li><li>Çevre dostu bir gazdır.</li><li>Kimyasal madde gerektirmez ve içermez.</li><li>Antibakteriyeldir.</li><li>Bakteri, küf, spor, jerm ve mantar oluşumunu engeller ve yok eder.</li><li>Havada üreyen her türlü bakteri (airborne bacteria) oluşumunu engeller.</li><li>Tüm mikroorganizmaların oluşumunu engeller ve yok eder.</li><li>Kimyasal madde kullanımı sonucu kalan artıkları yok eder.</li><li>Ozon gazı klora göre 3125 kat daha etkilidir. Çok hızlı tesir eder.</li><li>Kullanım sonrası tortu, kalıntı bırakmaz.</li><li>Gıda korumasında kullanılması tehlike içermez.</li><li>Haşerat ve zararlıların çoğalmasını önler.</li></ul>
 		`
 	},
 	{

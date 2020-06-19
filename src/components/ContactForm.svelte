@@ -72,7 +72,7 @@
         required
         name="_replyto"
         type="email" bind:value={email}
-        placeholder="mail@gmail.com"
+        placeholder="E-Mail Adresiniz"
         style="border-bottom-color: {EmailColor(email)}" />
 
     <input
@@ -81,7 +81,7 @@
         name="message"
         type="text"
         bind:value={message}
-        placeholder="Mesaj"
+        placeholder="Mesajınız"
         style="border-bottom-color: {message ? '#00bb55' : '#999'}" />
 
     <input type="submit" value="Gönder" disabled={!name || !message || !ValidEmail(email)}>
