@@ -15,7 +15,7 @@
     }
 
     a { font-size: 1.5em }
-    p { margin-top: 15px }
+    span { margin-top: 15px; display: block }
 
     img {
         width: 200px;
@@ -48,6 +48,6 @@
     </a>
     <div class="text">
         <a rel='prefetch' href='blog/{content.slug}'>{content.title}</a>
-        <p>{content.description}</p>
+        <span>{content.description}</span>
     </div>
 </div>

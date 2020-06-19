@@ -1,5 +1,14 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	import { language } from '../language.js';
+
+	let lang = null;
+
+	language.subscribe(value => { lang = value });
+
+	const ChangeLanguage = newLang => {
+		language.set(newLang);
+	}
 
 	export let segment;
 </script>
@@ -40,13 +49,14 @@
 	.lang a { opacity: .7; transition: opacity .1s }
 	.lang a:hover { opacity: 1 }
 
-	footer img { width: 28px; }
+	footer img { width: 28px; margin-left: 10px; cursor: pointer }
 
 	@media (max-width: 550px)
 	{
 		.iletisim { text-align: center }
 		.iletisim img { display: none }
 		footer { flex-direction: column; padding: 20px }
+		footer img { margin: 0 5px }
 		.lang { margin-top: 15px }
 	}
 </style>
@@ -60,10 +70,16 @@
 <footer>
 	<div class="iletisim">
 		<img src="img/red-phone.png" alt="PHONE">
-		<a href="iletisim">İletişim bilgileri için tıklayınız.</a>
+		<a href="iletisim">
+			{#if lang=="tr"}
+			İletişim bilgileri için tıklayınız.
+			{:else}
+			Click to see contact information.
+			{/if}
+		</a>
 	</div>
 	<div class="lang">
-		<a href="#"><img src="img/tr.png" alt="TR"></a>
-		<a href="#"><img src="img/en.png" alt="EN"></a>
+		<a on:click={() => ChangeLanguage('tr')}><img src="img/tr.png" alt="TR"></a>
+		<a on:click={() => ChangeLanguage('en')}><img src="img/en.png" alt="EN"></a>
 	</div>
 </footer>

@@ -1,5 +1,6 @@
 <script>
 	import Slider from '../components/Slider.svelte';
+	import { language } from '../language.js';
 
 	const uvc = [ 'placeholder-image.jpg' ];
 	const ozon = [ 'placeholder-image.jpg' ];
@@ -20,6 +21,9 @@
 		ozonIndex += controller ? 1 : 0;
 		controller = !controller;
 	}
+
+	let lang = null;
+	language.subscribe(value => { lang = value });
 </script>
 
 <style>
@@ -57,7 +61,8 @@
 	#products #slider *,
 	#references * { max-width: 100%; max-height: 100% }
 
-	.arrow { width: 100% }
+	.arrow { width: 100%; cursor: pointer }
+	.arrow::selection { display: none }
 
 	@media (max-width: 700px) {
 		h2 { text-align: center }
@@ -83,7 +88,7 @@
 
 <div id="container">
 	<div id="products">
-		<h2>ÜRÜNLER</h2>
+		<h2>{#if lang=="tr"}ÜRÜNLER{:else}PRODUCTS{/if}</h2>
 		<div id="slider">
 			<img src="/img/left-arrow.png"  alt="sol" class="arrow" on:click={LeftArrow} />
 
@@ -96,7 +101,7 @@
 		</div>
 	</div>
 	<div id="references">
-		<h2>REFERANSLAR</h2>
+		<h2>{#if lang=="tr"}REFERANSLAR{:else}REFERENCES{/if}</h2>
 		<Slider slides={references} bind:index={refIndex} />
 	</div>
 </div>

@@ -1,5 +1,9 @@
 <script>
 	export let segment;
+	import { language } from '../language.js';
+
+	let lang = null;
+	language.subscribe(value => { lang = value });
 </script>
 
 <style>
@@ -61,9 +65,11 @@
 	<a href="/"><img src="/img/logo.png" alt="Logo" /></a>
 
 	<nav>
-		<a aria-current="{segment === 'hakkimizda' ? 'page' : undefined}"
-		   href="hakkimizda">HAKKIMIZDA</a>
-		<a aria-current="{segment === 'blog'  ? 'page' : undefined}"
-		   href="blog"rel=prefetch>BLOG</a>
+		<a aria-current="{segment === 'hakkimizda' ? 'page' : undefined}" href="hakkimizda">
+		   {#if lang=="tr"} HAKKIMIZDA {:else} ABOUT US {/if}
+		</a>
+		<a aria-current="{segment === 'blog'  ? 'page' : undefined}" href="blog" rel=prefetch>
+			BLOG
+		</a>
 	</nav>
 </div>
