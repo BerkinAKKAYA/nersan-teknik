@@ -22,7 +22,7 @@ const posts = [
 	{
 		title: 'Ozon nedir?',
 		slug: 'Ozon nedir?',
-		description: 'Ozon Nedir? ve Nerelerde Kullanılır?',
+		description: 'Ozon Nedir ve Nerelerde Kullanılır...',
 		imageURL: 'img/ozon-nedir.jpg',
 		html: `
 		<h1>Ozon Nedir?</h1>
