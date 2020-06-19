@@ -2,6 +2,7 @@
     let name;
     let email;
     let message;
+    let phone;
 
     const ValidEmail = () => (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email));
 
@@ -21,7 +22,7 @@
         margin-top: 20px;
     }
 
-    input[type=text], input[type=email] {
+    input[type=text], input[type=email], input[type=tel] {
         width: 100%;
         padding: 8px 4px;
         background: none;
@@ -29,7 +30,7 @@
         margin-bottom: 12px;
         transition: border .3s ease;
     }
-    input[type=text]:focus, input[type=email]:focus {
+    input[type=text]:focus, input[type=email]:focus, input[type=tel]:focus {
         border-bottom: 2px solid #999;
         border-radius: 3px;
     }
