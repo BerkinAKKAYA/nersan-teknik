@@ -83,5 +83,5 @@
         placeholder="Mesaj"
         style="border-bottom-color: {message ? '#00bb55' : '#999'}" />
 
-    <input type="submit" value="Gönder" disabled={!name || !message || !phone || !ValidEmail(email)}>
+    <input type="submit" value="Gönder" disabled={!name || !message || !ValidEmail(email)}>
 </form>
