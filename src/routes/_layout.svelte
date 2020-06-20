@@ -46,8 +46,6 @@
 	.iletisim a { margin-left: 10px }
 
 	.lang { cursor: default }
-	.lang a { opacity: .7; transition: opacity .1s }
-	.lang a:hover { opacity: 1 }
 
 	footer img { width: 28px; margin-left: 10px; cursor: pointer }
 
@@ -79,7 +77,7 @@
 		</a>
 	</div>
 	<div class="lang">
-		<a on:click={() => ChangeLanguage('tr')}><img src="img/tr.png" alt="TR"></a>
-		<a on:click={() => ChangeLanguage('en')}><img src="img/en.png" alt="EN"></a>
+		<img src="img/tr.png" alt="TR" on:click={() => ChangeLanguage('tr')}>
+		<img src="img/en.png" alt="EN" on:click={() => ChangeLanguage('en')}>
 	</div>
 </footer>

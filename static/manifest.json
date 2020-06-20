@@ -1,8 +1,8 @@
 {
-	"background_color": "#ffffff",
-	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"background_color": "#000",
+	"theme_color": "#fff",
+	"name": "Nersan Teknik Resmi Websitesi",
+	"short_name": "Nersan Teknik",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [
