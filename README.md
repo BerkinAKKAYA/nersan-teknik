@@ -1,3 +1,6 @@
 # Nersan Teknik
 
-Built by *Berkin AKKAYA*
+
+* Multilingual *(English & Turkish)*
+* Form Validation
+* Built with Svelte & Sapper
