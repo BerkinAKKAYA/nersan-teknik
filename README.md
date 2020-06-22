@@ -1,3 +1,3 @@
 # Nersan Teknik
 
-> Built by *Berkin AKKAYA* usign *Svelte* & *Sapper*
+Built by *Berkin AKKAYA*
