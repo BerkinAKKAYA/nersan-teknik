@@ -1,16 +1,18 @@
 <script>
     export let slides;
     export let index;
+	
+    const INTERVAL = 5000; // 5 Seconds
 
-	const Restrict = (value, min, max) => {
-		if (value >= max) { return min }
-		if (value <= min) { return max }
+    const Clamp = (value, min, max) => {
+	if (value >= max) { return min }
+	if (value <= min) { return max }
 
-		return value;
+	return value;
     }
 
-    $: index = Restrict(index, 0, slides.length-1);
-	setInterval(() => { index += 1 }, 5000);
+    $: index = Clamp(index, 0, slides.length-1);
+    setInterval(() => { index += 1 }, INTERVAL);
 </script>
 
 <style>
